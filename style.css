@@ -4,7 +4,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-color: #f0f0f0;
   overflow: hidden;
 }
@@ -15,7 +14,7 @@ body {
   text-align: center;
   pointer-events: none;
   position: absolute;
-  top: 4%;
+  top: 4.5%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 100;
