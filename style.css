@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+.top-text {
+  font-family: 'Public Pixel', sans-serif;   
+  font-size: 10px;
+  text-align: center;
+  pointer-events: none;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 80%;
+}
+
+.bottom-text {
+  opacity: 50%;
+  color: #f0f0f0;
+  font-family: 'Public Pixel', sans-serif;   
+  font-size: 9px;
+  text-align: center;
+  pointer-events: none;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 80%;
+}
+
+#blinking-text {
+  color: black;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.grid-overlay {
+  position: relative;
+  display: grid;
+  width: 500px;
+  height: 700px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.grid-cell {
+  background-image: url('/asset/image.png');
+  background-size: 500px 560px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  filter: saturate(0);
+  z-index: 2;
+}
+
+.grid-cell:hover {
+  transform: scale(2);
+  z-index: 4;
+  filter: saturate(10);
+}
+
+.darken {
+  filter: brightness(0.1);
+}
+
+.falling-photos {
+  justify-content: center;
+  filter: blur(10%);
+  filter: saturate(0);
+  pointer-events: none;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 700px;
+  overflow: hidden;
+  background-image: url('/asset/iiiii.png');
+  background-size: cover;
+  opacity: 0.5;
+  animation: falling 40s linear infinite;
+}
+
+@keyframes falling {
+  0% {
+      transform: translateY(-50%);
+  }
+  100% {
+      transform: translateY(50%);
+  }
+}
+
