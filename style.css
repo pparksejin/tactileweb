@@ -56,7 +56,7 @@ body {
 }
 
 .grid-cell {
-  background-image: url('asset/image.png');
+  background-image: url(/asset/image.png);
   background-size: 500px 560px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   position: relative;
@@ -86,7 +86,7 @@ body {
   width: 500px;
   height: 700px;
   overflow: hidden;
-  background-image: url('asset/iiiii.png');
+  background-image: url(/asset/iiiii.png);
   background-size: cover;
   opacity: 0.5;
   animation: falling 40s linear infinite;
